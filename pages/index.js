@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Box, ThemeProvider } from "@primer/components";
-import { ButtonWithAnchoredOverlay } from "../components/button-anchor-overlay";
-
+import { FavoriteColorStory } from "../components/favorite-color";
+import { ExternalAnchorStory } from "../components/external-anchor";
 export async function getServerSideProps() {
   return new Promise((resolve) => resolve({ props: { data: "None" } }));
 }
@@ -18,7 +18,8 @@ export default function Home({ data }) {
       <main>
         <ThemeProvider>
           <Box m={2}>
-            <ButtonWithAnchoredOverlay portalContainerName="scrollingPortal" />
+            <FavoriteColorStory />
+            <ExternalAnchorStory />
           </Box>
         </ThemeProvider>
       </main>
