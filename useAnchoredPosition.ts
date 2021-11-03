@@ -61,7 +61,7 @@ export function useAnchoredPosition(
     [floatingElementRef, anchorElementRef, ...dependencies]
   );
 
-  React.useLayoutEffect(updatePosition, [updatePosition]);
+  React.useEffect(updatePosition, [updatePosition]);
 
   useResizeObserver(updatePosition);
 

@@ -3,7 +3,7 @@
 import React from 'react';
 
 export function useResizeObserver(callback: () => void) {
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const observer = new window.ResizeObserver(() => callback());
     observer.observe(document.documentElement);
     return () => {
